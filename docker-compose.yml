@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  
+  best-matched-restaurants:
+    image: 'best-matched-restaurants-backend'
+    platform: linux/amd64
+    build:
+      context: ./backend/
+      dockerfile: ./Dockerfile
+    container_name: best-matched-restaurants
+    ports:
+      - "8080:8080"
